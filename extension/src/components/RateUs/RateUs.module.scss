@@ -1,0 +1,28 @@
+.rateUs {
+    display: flex;
+    flex-direction: column;
+
+    .starIcon {
+        fill: rgba(36, 36, 46, 0.2);
+        padding: 6px;
+        box-sizing: content-box;
+    }
+}
+
+.rateText {
+    cursor: pointer;
+    gap: 5px;
+    display: inline-flex;
+    margin-left: auto;
+    opacity: 0.5;
+
+    &.active,
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.rating {
+    display: flex;
+    justify-content: center;
+}

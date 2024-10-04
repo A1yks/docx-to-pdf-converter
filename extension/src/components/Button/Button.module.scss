@@ -1,0 +1,57 @@
+.buttonWrapper {
+    position: relative;
+}
+
+.button {
+    padding: 6px 12px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-color);
+    font-size: 14px;
+    font-weight: 400;
+    font-family: Geologica;
+    color: #fff;
+
+    &.primary {
+        background: linear-gradient(136deg, #41a0ff 0%, #2248cf 100%);
+    }
+
+    &.secondary {
+        background: #41ba55;
+    }
+
+    &.success {
+        background: #e4ffe9;
+        color: #41ba55;
+    }
+}
+
+.tooltip {
+    position: absolute;
+    left: 0;
+    bottom: -51px;
+    width: 100%;
+    background: #201e2e;
+    padding: 6px 12px;
+    border-radius: 12px;
+    color: #fff;
+
+    &::before {
+        content: '';
+        border: 10px solid transparent;
+        border-bottom: 10px solid #201e2e;
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 100;
+    }
+}

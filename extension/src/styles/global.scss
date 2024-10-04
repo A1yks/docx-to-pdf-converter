@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Geologica;
+    src: url(../fonts/Geologica.ttf) format('truetype');
+}
+
+:root {
+    --text-color: #2e2e46;
+    --gray: #f2f3f6;
+    --select-btn-bg: linear-gradient(168deg, #41a0ff 0%, #2248cf 100%);
+    --star-fill-color: rgba(70, 67, 94, 0.2);
+}
+
+body {
+    font-family: Geologica, sans-serif;
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+.divider {
+    width: 100%;
+    height: 1px;
+    background: #e6e6e6;
+    margin: 10px 0;
+}
+
+.simplebar-track {
+    background: #f2f3f6;
+    pointer-events: all;
+    border-radius: 8px;
+
+    &.simplebar-vertical {
+        width: 6px;
+        max-height: 100%;
+        right: -12px;
+    }
+
+    &.simplebar-horizontal {
+        height: 6px;
+        max-width: 100%;
+    }
+}
+
+.simplebar-scrollbar {
+    background: #c5c8d0;
+    border-radius: 8px;
+
+    &::before {
+        background: #c5c8d0;
+    }
+}
+
+.simplebar-content {
+    min-height: 100%;
+    height: 1px;
+}

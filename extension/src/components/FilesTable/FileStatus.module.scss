@@ -1,0 +1,80 @@
+.downloadBtn {
+    width: 90px;
+    gap: 4px;
+    height: 24px;
+    font-size: 12px;
+    padding: 6px 10px;
+    border-radius: 6px;
+
+    svg {
+        flex-shrink: 0;
+    }
+}
+
+.progress {
+    position: relative;
+}
+
+.progressLabel {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    clip-path: inset(0 0 0 50%);
+}
+
+.failed {
+    color: #c21549;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    position: relative;
+}
+
+.qm {
+    cursor: pointer;
+
+    &:hover + .tooltip {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.tooltip {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    min-width: 100px;
+    max-width: 150px;
+    box-shadow: 0 0 10px 0 rgba(188, 194, 226, 0.21), 0 0 2px 1px rgba(165, 172, 207, 0.13);
+    padding: 6px 12px;
+    border-radius: 12px;
+    background: #fff;
+    top: -100%;
+    transform: translateY(-100%);
+    left: -50%;
+    white-space: initial;
+    z-index: 1;
+    transition: opacity 0.2s;
+    color: var(--text-color);
+
+    .triangle {
+        position: absolute;
+        z-index: 2;
+        left: 67%;
+        bottom: -10px;
+        filter: drop-shadow(-2px 0 2px rgba(165, 172, 207, 0.13));
+        transform: rotate(-90deg);
+    }
+}
+
+.tooltipBottom {
+    top: auto;
+    bottom: -100%;
+    transform: translateY(100%);
+
+    .triangle {
+        bottom: auto;
+        top: -10px;
+        transform: rotate(90deg);
+    }
+}
